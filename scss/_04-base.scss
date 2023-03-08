@@ -9,6 +9,7 @@ body {
   line-height: 1.4;
   color: $clr-dark;
   transition: .5s ease;
+ 
 }
 body.show {
   transform: translateX(-350px);
