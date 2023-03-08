@@ -1,0 +1,82 @@
+.header{
+    padding: 1.5rem 0;
+    a{
+        font-weight: bold;
+    }
+    .branding a{
+        font-size: 2rem;
+        span{
+            color: $clr-primary;
+        }
+    }
+    .btn__back{
+        display: none;
+        cursor: pointer;
+        @include mediaQuery($mobile){
+            display: block;
+          
+        }
+    }
+    .btn__show{
+        position: absolute;
+        right: 3rem;
+        top: 1rem;
+        display: none;
+        font-size: 3rem;
+        cursor: pointer;
+        @include mediaQuery($mobile){
+            display: block;
+        }
+    }
+    &__nav{
+        @include mediaQuery($mobile){
+            position: fixed;
+            top: 0;
+            right: -350px;
+            height: 100vh;
+            width: 300px;
+            background-color: $clr-light;
+            border-left: 1px solid #ccc;
+            z-index: 999;
+            .btn__back{
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                font-size: 3rem;
+            }
+            ul{
+                margin-top: 6rem;
+                justify-content: flex-end;
+                flex-direction: column;
+                li{
+                    margin-bottom: 2rem;
+                    
+                }
+                a{
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        a{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $clr-primary;
+                left: 0;
+                bottom: -.5rem;
+                opacity: 0;
+                transition: .5 ease-in-out;
+            }
+        }
+        a:hover::after{
+            opacity: 1;
+        }
+        a.active::after{
+            opacity: 1;
+        }
+        
+    }
+}
