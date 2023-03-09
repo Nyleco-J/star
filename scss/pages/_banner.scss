@@ -1,0 +1,138 @@
+.photo{
+    padding: 2rem 0;
+}
+.banner{
+    padding-top: 12rem;
+    background-image: url(/image/photo1.jpeg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: 85%;
+    &__wrapper{
+        margin-left: 2rem;
+        
+        h2{
+            font-size: 4rem;
+            color: $clr-primary;
+            margin-bottom: 4rem;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        a{
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border-style: solid;
+            padding: .5rem 15px;
+            border-width: 1px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(white, .2);
+            }
+        }
+
+    }
+    @include mediaQuery($break-lg){
+        &{
+            height:570px;
+        }
+        &__wrapper{
+            background-size: cover;
+            padding: 4rem 0;
+            h2{
+                font-size: 6rem;
+            }
+        }
+    }
+}
+.gift{
+    &__wrapper{
+         background-color: $clr-primary;
+        text-align: center;
+        img{
+            background-color: $clr-light;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+        } 
+    }
+    &__text{
+        padding: 3rem;
+        width: 100%;
+        color: $clr-light;
+        h3{
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        p{
+            padding-bottom: 2rem;
+        }
+        a{
+            color: $clr-light;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border-style: solid;
+            padding: .5rem 15px;
+            border-width: 1px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(white, .2);
+            }
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            flex-direction: row;  
+            display: flex;
+            max-width: 130rem;
+            margin: 0 auto;
+        }
+    }
+}
+.rich{
+    padding-top: 3rem;
+    &__wrapper{
+        background-color: $clr-primary;
+       text-align: center;
+       img{
+           background-color: $clr-light;
+           width: 100%;
+           height: 220px;
+           object-fit: cover;
+           background-size: cover;
+           background-repeat: no-repeat;
+       } 
+   }
+   &__text{
+       padding: 3rem;
+       width: 100%;
+       color: $clr-light;
+       h3{
+           margin-bottom: 2rem;
+           font-size: 2.5rem;
+       }
+       p{
+           padding-bottom: 2rem;
+       }
+       a{
+           color: $clr-light;
+           font-size: 1.8rem;
+           font-weight: 700;
+           border-radius: 50px;
+           border-style: solid;
+           padding: .5rem 15px;
+           border-width: 1px;
+           cursor: pointer;
+           &:hover{
+               background-color: rgba(white, .2);
+           }
+       }
+   }
+   .rich__wrapper#ulti{
+        margin-top: 2rem;
+   }
+   
+}
